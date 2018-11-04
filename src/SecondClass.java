@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 import java.util.List;
 
-public class SeconClass {
+public class SecondClass {
 
     List<Button> buttons = new LinkedList<>();
 
@@ -15,7 +15,6 @@ public class SeconClass {
 
     public void deleteButton(Button button){
         buttons.remove(button);
-
     }
 
     public String myButtonsText(){

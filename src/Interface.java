@@ -3,16 +3,13 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.*;
-import java.util.List;
 
 class Interface implements ActionListener {
 
     private JFrame frame;
     private JPanel panel;
     private JButton b1,b2,b3;
-
     private TextArea ta;
-
     private Button btn;
 
     //Creation graphics interface program
@@ -26,7 +23,6 @@ class Interface implements ActionListener {
         panel = new JPanel();
         panel.setLayout(null);
         frame.add(panel);
-
 
         ta = new TextArea();
         ta.setBounds(20, 20, 550, 200);
@@ -54,12 +50,12 @@ class Interface implements ActionListener {
         frame.setVisible(true);
     }
 
-    SeconClass sc = new SeconClass();
-
+    SecondClass sc = new SecondClass();
 
     @Override
     public void actionPerformed(ActionEvent e) {
         switch (e.getActionCommand()) {
+
             case "create":
                 String[] itemsName = {"H","Backspace","Esc","Delene","Enter","Shift","Button","Tab","Insert"};
                 Random r = new Random();
@@ -70,15 +66,16 @@ class Interface implements ActionListener {
                 sc.addButton(btn);
                 ta.setText(sc.myButtonsText());
                 break;
+
             case "get":
                 sc.getButtons();
                 ta.setText(sc.ButtonsGet());
                 break;
+
             case "delete":
                 sc.deleteButton(btn);
                 ta.setText(sc.deleteButtons());
                 break;
-
 
         }
     }
