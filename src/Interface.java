@@ -69,12 +69,12 @@ class Interface implements ActionListener {
 
             case "get":
                 sc.getButtons();
-                ta.setText(sc.ButtonsGet());
+                ta.setText(sc.ButtonsGetText());
                 break;
 
             case "delete":
-                sc.deleteButton(btn);
-                ta.setText(sc.deleteButtons());
+                sc.buttons.removeLast();
+                ta.setText(sc.deleteButtonsText());
                 break;
 
         }
