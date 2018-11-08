@@ -50,31 +50,32 @@ class Interface implements ActionListener {
         frame.setVisible(true);
     }
 
-    SecondClass sc = new SecondClass();
+    Keyboard kb = new Keyboard();
 
     @Override
     public void actionPerformed(ActionEvent e) {
         switch (e.getActionCommand()) {
 
             case "create":
-                String[] itemsName = {"H","Backspace","Esc","Delene","Enter","Shift","Button","Tab","Insert"};
                 Random r = new Random();
+                String[] itemsName = {"H","Backspace","Esc","Delene","Enter","Shift","Button","Tab","Insert"};
                 String nameValue = itemsName[r.nextInt(itemsName.length)];
                 String heightValue = "" + r.nextInt(20);
                 String weightValue = "" + r.nextInt(30);
-                btn = new Button(nameValue, heightValue,weightValue);
-                sc.addButton(btn);
-                ta.setText(sc.myButtonsText());
+//
+                btn = new Button(nameValue, heightValue, weightValue);
+                kb.addButton(btn);
+                ta.setText(kb.myButtonsText());
                 break;
 
             case "get":
-                sc.getButtons();
-                ta.setText(sc.ButtonsGetText());
+                kb.getButtons();
+                ta.setText(kb.buttonsGetText());
                 break;
 
             case "delete":
-                sc.buttons.removeLast();
-                ta.setText(sc.deleteButtonsText());
+                kb.buttons.removeLast();
+                ta.setText(kb.deleteButtonsText());
                 break;
 
         }

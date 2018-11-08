@@ -1,7 +1,7 @@
 import java.util.*;
 
 
-public class SecondClass {
+public class Keyboard {
 
     LinkedList<Button> buttons = new LinkedList<>();
 
@@ -13,9 +13,6 @@ public class SecondClass {
         return this.buttons;
     }
 
-//    public void deleteButton(Queue<Button> buttonQueue){
-//
-//    }
 
     public String myButtonsText(){
         String text = "list of my buttons: \n";
@@ -27,7 +24,7 @@ public class SecondClass {
         return text;
     }
 
-    public String ButtonsGetText(){
+    public String buttonsGetText(){
         String text = "Get of my buttons: \n";
         int i = 0;
         for(Button button : buttons){
