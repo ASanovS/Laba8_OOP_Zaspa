@@ -19,7 +19,7 @@ public class Keyboard {
         int i = 0;
         for(Button button : buttons){
             i++;
-            text += ""+i + ") " + button.toString()+ "\n";
+            text += ""+i + ") " + button.toString();
         }
         return text;
     }
@@ -39,7 +39,7 @@ public class Keyboard {
         int i = 0;
         for(Button button : buttons){
             i++;
-            text += ""+i + ") " + button.toString() + "\n";
+            text += ""+i + ") " + button.toString();
         }
         return text;
     }
